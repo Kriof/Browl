@@ -1,0 +1,86 @@
+@import '../../style/colors.scss';
+@import '../../style/variables.scss';
+
+.Contact {
+// display:flex;
+// justify-content: center;
+// width: 50%; 
+    display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  h1,h2,h3,h4,h5,h6 {
+      margin: 0;
+      font-weight: 500;
+      color:white;
+  }
+  h5 {
+      padding-bottom: 0.5em;
+  }
+  h6 {
+      padding-bottom: 0.5em;
+  }
+    .container {
+        // border: 1px solid red;
+        margin: 5px;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        .form {
+            display: flex;
+            flex-wrap: wrap;
+            width:100%;
+            max-width: 50%;
+            // border: 2px solid green;
+            align-self:center;
+            .column {
+                // // border: 1px solid yellow;
+                display:flex;
+                flex-direction: column;
+                flex-grow: 1;
+                align-items: flex-start;
+                min-width:40%;
+                padding: 0 0.5em 0.5em 0.5em;
+                input {
+                    margin: 0.75em 0 ;
+                    min-width: 80%;
+                }
+                &.img{
+                    display:flex;
+                    flex-direction: column;
+                    justify-content: center;;
+                    align-items: center;;
+                }
+            }
+            .row {
+                flex-grow: 2;
+                padding: 0 0.5em 1em 0.5em;
+                
+                // width: 100%;
+                textarea {
+                     width: 100%;
+                     height:200px;
+                }
+            }
+        }
+        .btn {
+            border: 2px solid $BROWL_background_dark;
+            // border-radius: 20px 20px;
+            
+            height: 3em;
+            width: 10em;
+        }
+        .btn-submit {
+            cursor: pointer;
+        }
+    }
+    @media only screen and (max-width: 768px) { 
+        .column {
+          width: 100%;
+          max-width: 40%;
+          border: 1px solid red;
+        }
+      }
+}

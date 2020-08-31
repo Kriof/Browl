@@ -1,0 +1,18 @@
+.Header .App-header {
+  display: flex;
+  justify-content: space-between; }
+  .Header .App-header .Credentials {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    font-size: 0.5em; }
+    .Header .App-header .Credentials .contact {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 1em 5em;
+      color: #dcdcdc; }
+      .Header .App-header .Credentials .contact .Credentials-icon {
+        height: 1.2em;
+        padding: 1em 0.5em; }

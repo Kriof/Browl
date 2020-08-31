@@ -1,0 +1,65 @@
+@import '../../style/colors.scss';
+@import '../../style/variables.scss';
+
+.LandingPage {
+    .logo img{
+        height:12vh;
+    }
+    .text-container {
+        background-color: $BROWL_grey_light;
+        color: $BROWL_background_dark;
+        p {
+            margin: 0.3em;
+            font-size:$defaultFontSize;
+            font-weight: 600;
+            color: black;
+            &.text-container-wait{
+                margin-top:2em;
+                padding-bottom: 1em;
+            }
+            
+        }
+    }
+    .icon-section{
+        display: flex;
+        flex-direction: column;
+        
+        img {
+            max-width: 8%;
+            padding-left:10%;
+        }
+        .row {
+            display: flex;
+            flex-direction: row;
+            // flex-wrap: wrap;
+            
+            justify-content: center;
+            align-items:center;
+          }
+          
+          .column {
+              
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items:center;
+            font-size: $defaultFontSize;
+            width:50%;
+            
+            padding: 2%;
+            text-align: left;
+            text-justify: left;
+            p {
+                padding-left: 2em;
+                max-width: 69%;
+            }
+          }
+    }
+}
+@media only screen and (max-width: 800px) {
+    .LandingPage {
+        .logo img{
+            height:30vh;
+        }
+    }
+}

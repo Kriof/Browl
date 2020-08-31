@@ -1,0 +1,20 @@
+.Header {
+  width: 100%;
+  display: flex;
+  align-items: top; }
+  .Header .Credentials {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: top;
+    font-size: 0.5em; }
+    .Header .Credentials .contact {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 1em 5em;
+      color: #dcdcdc; }
+      .Header .Credentials .contact .Credentials-icon {
+        height: 1.2em;
+        padding: 1em 0.5em; }

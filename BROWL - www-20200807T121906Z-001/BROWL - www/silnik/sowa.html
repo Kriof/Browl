@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset='utf-8'>
+    <title>BROWL_GRAFIKA</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src='js/jquery.svg3dtagcloud.min.js'></script>
+
+    <link href='https://fonts.googleapis.com/css?family=Oswald&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+    <style type='text/css'>
+
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, font, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: 0;
+            font-size: 100%;
+            vertical-align: baseline;
+            background: transparent;
+            box-sizing: border-box;
+	    
+        }
+
+        body {
+            overflow: hidden;
+            background-color: #1d1d1e;
+        }
+
+    </style>
+
+    <script>
+
+    	$( document ).ready( function() {
+
+            var entries = [ 
+                
+                { 
+			image: 'Pustynia.png', 
+			width: '100', 
+			height: '100',  
+			url: 'https://www.jqueryscript.net/tags.php?/Back%20to%20top/',  
+			target: '_top'  
+		},
+
+                {  
+			image: 'wizytówka_FASTBUD.png',  
+			width: '100',  
+			height: '100',  
+			url: 'http://niklasknaack.blogspot.de/',  
+			target: '_top'  
+		},
+
+                {  
+			image: 'ulotka_FASTBUD.png',   
+			width: '100',  
+			height: '100',  
+			url: 'http://www.flashforum.de/',  
+			target: '_top'  
+		},
+                {  
+			image: 'logo_FASTBUD.png',  
+			width: '100',  
+			height: '100',  
+			url: 'http://www.jqueryscript.net/',  
+			target: '_top'  
+		},
+                {  
+			image: 'wizytówka_BROWL.png',  
+			width: '100',  
+			height: '100',  
+			url: 'http://forum.jswelt.de/',  
+			target: '_top'  
+		},
+                {  
+			image: 'ulotka_BROWL.png',   
+			width: '100',  
+			height: '100',  
+			url: 'https://jsfiddle.net/user/NiklasKnaack/fiddles/',  
+			target: '_top'  
+		},
+                {  
+			image: 'logo_BROWL.png',  
+			width: '100',  
+			height: '100',  
+			url: 'http://codepen.io/',  
+			target: '_top'  
+		},
+                {  
+			image: 'straż_FHUFP.png',  
+			width: '100',  
+			height: '100',  
+			url: 'http://threejs.org/',  
+			target: '_top'  
+		},
+                {  
+			image: 'straż_ELWiK.png',  
+			width: '100',   
+			height: '100',   
+			url: 'http://webglstudio.org/',   
+			target: '_top'   
+		},
+                {   
+			image: 'post_ELWiK.png',   
+			width: '100',   
+			height: '100',   
+			url: 'http://jscompress.com/',   
+			target: '_top'   
+		},
+                {   
+			image: 'post_ELWiK2.png',   
+			width: '100',   
+			height: '100',   
+			url: 'http://caniuse.com/',   
+			target: '_top'   
+		},
+                {   
+			image: 'plakat_ELWiK.png',   
+			width: '100',   
+			height: '100',   
+			url: 'https://goo.gl/',   
+			target: '_top'   
+		},
+                {   
+			image: 'post_ELWiK3.png',   
+			width: '100',   
+			height: '100',   
+			url: 'http://www.opinionatedgeek.com/DotNet/Tools/HTMLEncode/Encode.aspx',   
+			target: '_top'   
+		},
+                {   
+			image: 'post_ELWiK4.png',   
+			width: '100',   
+			height: '100',   
+			url: 'https://twitter.com/niklaswebdev',   
+			target: '_top'   
+		},
+                {   
+			image: 'post_ELWiK5.png',   
+			width: '100',   
+			height: '100',   
+			url: 'http://nkunited.deviantart.com/',   
+			target: '_top'   
+		},
+                {   
+			image: 'post_ELWiK6.png',   
+			width: '100',   
+			height: '100',   
+			url: 'http://gulpjs.com/',   
+			target: '_top'   
+		},
+                {   
+			image: 'post_ELWiK7.png',   
+			width: '100',   
+			height: '100', url: 'https://www.browsersync.io/',   
+			target: '_top'   
+		},
+                {   
+			image: 'skyline.png',   
+			width: '100',   
+			height: '100',   
+			url: 'https://github.com/',   
+			target: '_top'   
+		},
+               
+
+            ];
+
+            var settings = {
+
+                		entries: entries,
+                width: 1100,
+                height: 580,
+                radius: '100%',
+                radiusMin: 300,
+                bgDraw: false,
+                bgColor: '#1d1d1e',
+                opacityOver: 1.00,
+                opacityOut: 0.05,
+                opacitySpeed: 6,
+                fov: 800,
+                speed: 1,
+                fontFamily: 'Oswald, Arial, sans-serif',
+                fontSize: '15',
+                fontColor: '#fff',
+                fontWeight: 'normal',//bold
+                fontStyle: 'normal',//italic 
+                fontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                fontToUpperCase: true,
+                tooltipFontFamily: 'Oswald, Arial, sans-serif',
+                tooltipFontSize: '11',
+                tooltipFontColor: '#fff',
+                tooltipFontWeight: 'normal',//bold
+                tooltipFontStyle: 'normal',//italic 
+                tooltipFontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                tooltipFontToUpperCase: false,
+                tooltipTextAnchor: 'left',
+                tooltipDiffX: 0,
+                tooltipDiffY: 10
+
+            };
+
+            //var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
+            $( '#holder' ).svg3DTagCloud( settings );
+
+		} );
+        
+    </script>
+
+</head>
+
+<body>
+    <center>
+	
+       <div id='holder'></div> 
+    </center>
+    
+
+</body>
