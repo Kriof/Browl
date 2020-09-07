@@ -33,62 +33,7 @@ class Contact extends React.Component {
     }
   }
 
-  SendEmail = () => {
-    const mailgun = require("mailgun-js");
-    const DOMAIN = "sandbox8ade7752dbb54735b9993cdf9e0c62f2.mailgun.org";
-    const mg = mailgun({
-      apiKey: "bee98a711e2297920a25a715dd84f003-07e45e2a-a0a7e384",
-      domain: DOMAIN,
-    });
-    var email = this.state.email;
-    const data = {
-      from: email,
-      to: "companybrowl@gmail.com",
-      subject: "Question from: " + this.state.name,
-      text: this.state.body,
-    };
-    mg.messages().send(data, function (error, body) {
-      console.log(body);
-    });
-    console.log("Email sent");
-  };
-  SendGridSend = () => {
-    // using Twilio SendGrid's v3 Node.js Library
-    // https://github.com/sendgrid/sendgrid-nodejs
-    const sgMail = require("@sendgrid/mail");
-    sgMail.setApiKey(
-      "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"
-    );
-    // const msg = {
-    //   to: "companybrowl@gmail.com",
-    //   from: this.state.email,
-    //   subject: `Msg from ${this.state.name}`,
-    //   text: "this.state.body",
-    //   html: `<html lang="en-US">
-    //   <head>
-    //     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    //   </head>
-    //   <body>
-    //     <script defer="defer" src="https://code.jquery.com/jquery-git.js"></script>
-    //     <div style="display: flex;">
-    //     <h1>Wiadomość od: ${this.state.name}</h1>
-    //     <p>${this.state.body}</p>
-    //     <p>Telefon:${this.state.phone}</p>
-    //     </div>
-    //   </body>
-    // </html>`,
-    // };
-    const msg = {
-      to: "companybrowl@gmail.com",
-      from: this.state.email,
-      subject: `Msg from ${this.state.name}`,
-      text: "this.state.body",
-      html: '<strong>and easy to do anywhere, even with Node.js</strong>',
-    }
-    
 
-    sgMail.send(msg);
-  };
   handleSubmit(event) {
     event.preventDefault();
     localStorage.setItem("msgSent", true);

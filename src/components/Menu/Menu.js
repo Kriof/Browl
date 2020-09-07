@@ -25,7 +25,7 @@ class Menu extends React.Component {
                         <li><Link to='/' >Home</Link></li>
                         <li><NavLink to="/graphic">Grafika</NavLink></li>
                         <li><Link to="/photography">Fotografia</Link></li>
-                        <li><Link to="/blog">Blog</Link></li>
+                        {/* <li><Link to="/blog">Blog</Link></li> */}
                         <li><Link to="/faq">FAQ</Link></li>
                         <li><Link to="/contact">Kontakt</Link></li>
                     </ul>

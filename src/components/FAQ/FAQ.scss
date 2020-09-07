@@ -1,1 +1,19 @@
 @import '../../style/colors.scss';
+
+.FAQ {
+    ul.main {
+        margin-top: 3em;
+        li {
+            list-style: none;
+        }
+    }
+
+    .question {
+        background-color: white;;
+        color: $BROWL_background_dark;
+    }
+    .description {
+        padding: 1em 7em;
+        text-align: left;
+    }
+}

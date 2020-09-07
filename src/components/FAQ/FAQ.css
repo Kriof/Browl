@@ -1,0 +1,12 @@
+.FAQ ul.main {
+  margin-top: 3em; }
+  .FAQ ul.main li {
+    list-style: none; }
+
+.FAQ .question {
+  background-color: white;
+  color: #1d1d1e; }
+
+.FAQ .description {
+  padding: 1em 7em;
+  text-align: left; }
